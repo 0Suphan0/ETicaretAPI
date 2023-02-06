@@ -3,9 +3,58 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6A982AE0-80F2-4B65-8998-E5DDB40D0F6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Domain", "Core\ETicaretAPI.Domain\ETicaretAPI.Domain.csproj", "{88B20FE0-CF43-4438-AD80-082F38FDE6D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Application", "Core\ETicaretAPI.Application\ETicaretAPI.Application.csproj", "{FB5C982E-B40D-411C-A45B-A5ED1D77509E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{01D6B967-1B2C-47BA-A94A-2D5105DE22EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Infrastructure", "Infrastructure\ETicaret.Infrastructure\ETicaretAPI.Infrastructure.csproj", "{B9F65CE8-535C-401D-8F77-F608C9772BEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Persistence", "Infrastructure\ETicaretAPI.Persistence\ETicaretAPI.Persistence.csproj", "{F83234C7-29E8-4AFD-AF4E-395050E156F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C0BF77E8-2FD8-4EF4-9C51-F2313D7DC812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.API", "ETicaretAPI.API\ETicaretAPI.API.csproj", "{59BC2671-7573-4D01-AA05-B859251F4FD0}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88B20FE0-CF43-4438-AD80-082F38FDE6D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B20FE0-CF43-4438-AD80-082F38FDE6D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B20FE0-CF43-4438-AD80-082F38FDE6D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B20FE0-CF43-4438-AD80-082F38FDE6D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB5C982E-B40D-411C-A45B-A5ED1D77509E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5C982E-B40D-411C-A45B-A5ED1D77509E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5C982E-B40D-411C-A45B-A5ED1D77509E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5C982E-B40D-411C-A45B-A5ED1D77509E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9F65CE8-535C-401D-8F77-F608C9772BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F65CE8-535C-401D-8F77-F608C9772BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F65CE8-535C-401D-8F77-F608C9772BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F65CE8-535C-401D-8F77-F608C9772BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83234C7-29E8-4AFD-AF4E-395050E156F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83234C7-29E8-4AFD-AF4E-395050E156F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83234C7-29E8-4AFD-AF4E-395050E156F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83234C7-29E8-4AFD-AF4E-395050E156F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BC2671-7573-4D01-AA05-B859251F4FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BC2671-7573-4D01-AA05-B859251F4FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BC2671-7573-4D01-AA05-B859251F4FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BC2671-7573-4D01-AA05-B859251F4FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{88B20FE0-CF43-4438-AD80-082F38FDE6D9} = {6A982AE0-80F2-4B65-8998-E5DDB40D0F6A}
+		{FB5C982E-B40D-411C-A45B-A5ED1D77509E} = {6A982AE0-80F2-4B65-8998-E5DDB40D0F6A}
+		{B9F65CE8-535C-401D-8F77-F608C9772BEC} = {01D6B967-1B2C-47BA-A94A-2D5105DE22EC}
+		{F83234C7-29E8-4AFD-AF4E-395050E156F5} = {01D6B967-1B2C-47BA-A94A-2D5105DE22EC}
+		{59BC2671-7573-4D01-AA05-B859251F4FD0} = {C0BF77E8-2FD8-4EF4-9C51-F2313D7DC812}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AE8E32DF-B813-439C-9C23-CE51DFFA0D83}
