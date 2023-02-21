@@ -4,17 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:43065",
-      "sslPort": 44364
+      "applicationUrl": "http://localhost:23607",
+      "sslPort": 44334
     }
   },
   "profiles": {
-    "WebApplication1": {
+    "ETicaretAPI.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7195;http://localhost:5195",
+      "applicationUrl": "https://localhost:7105;http://localhost:5105",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
