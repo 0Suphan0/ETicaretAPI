@@ -15,11 +15,11 @@ namespace ETicaretAPI.Application.Repositories
 
         bool Remove(T model);
 
-        bool Remove(string id);
+        Task<bool> RemoveAsync(string id);
 
         bool RemoveRange(List<T> models);
 
-        Task<bool> UpdateAsync(T model);
+        bool Update(T model);
 
         Task<int> SaveAsync();
 

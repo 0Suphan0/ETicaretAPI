@@ -13,6 +13,7 @@ namespace ETicaretAPI.Persistence.Repositories
 {
     public class WriteRepository<T> : IWriteRepository<T> where T : BaseEntity
     {
+
         private readonly ETicaretAPIDbContext _context;
 
 
@@ -25,42 +26,50 @@ namespace ETicaretAPI.Persistence.Repositories
 
         public async Task<bool> AddAsync(T model)
         {
+            // add async...
             EntityEntry<T> entityEntry = await Table.AddAsync(model);
             return entityEntry.State == EntityState.Added;
         }
 
         public async Task<bool> AddRangeAsync(List<T> model)
         {
+            // add range
             await Table.AddRangeAsync(model);
             return true;
         }
 
         public bool Remove(T model)
         {
+
            var entityEntry= Table.Remove(model);
-
            return entityEntry.State == EntityState.Deleted;
+
         }
 
-        public bool Remove(string id)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public bool RemoveRange(List<T> models)
         {
-            throw new NotImplementedException();
+
+           Table.RemoveRange(models);
+           return true;
+
         }
 
-        public Task<bool> UpdateAsync(T model)
+        public async Task<bool> RemoveAsync(string id)
         {
-            throw new NotImplementedException();
+            T model = await Table.FirstOrDefaultAsync(data => data.Id == Guid.Parse(id));
+            return Remove(model);
         }
 
-        public Task<int> SaveAsync()
+        public bool Update(T model)
         {
-            throw new NotImplementedException();
+            var entityEntry= Table.Update(model);
+
+            return entityEntry.State == EntityState.Modified;
+
         }
+
+        public  async Task<int> SaveAsync() => await _context.SaveChangesAsync();
     }
 
 }
