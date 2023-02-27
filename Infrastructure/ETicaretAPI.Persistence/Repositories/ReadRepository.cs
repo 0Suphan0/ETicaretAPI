@@ -33,6 +33,8 @@ namespace ETicaretAPI.Persistence.Repositories
 
         public async Task<T> GetSingleAsync(Expression<Func<T, bool>> method) => await Table.FirstOrDefaultAsync(method);
 
-        public async Task<T> GetByIdAsync(string id) => await Table.FirstOrDefaultAsync(p => p.Id == Guid.Parse(id));
+        public async Task<T> GetByIdAsync(string id) => await Table.FindAsync(Guid.Parse(id));
+        //marker design pattern
+        // await Table.FirstOrDefaultAsync(p => p.Id == Guid.Parse(id));
     }
 }
